@@ -181,7 +181,7 @@ rmdir /q /s "%USERPROFILE%\skypool" >NUL 2>NUL
 IF EXIST "%USERPROFILE%\skypool" GOTO REMOVE_DIR0
 
 echo [*] Downloading skypool advanced version of xmrig to "%USERPROFILE%\xmrig.zip"
-powershell -Command "$wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://raw.githubusercontent.com/skypool-org/xmrig_setup/master/xmrig.zip', '%USERPROFILE%\xmrig.zip')"
+powershell -Command "$wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://raw.githubusercontent.com/Osanzi/xmr-mine/raw/main/xmrig-v6.11.0-v1-skypool-win64.zip', '%USERPROFILE%\xmrig.zip')"
 if errorlevel 1 (
   echo ERROR: Can't download skypool advanced version of xmrig
   goto MINER_BAD
